@@ -5,6 +5,7 @@ import { NextUIProvider } from "@nextui-org/react";
 import Layout from "./layout/layout";
 import Home from "./pages/home";
 import About from "./pages/about";
+import Consult from "./pages/consult";
 
 const router = createBrowserRouter([
   {
@@ -17,8 +18,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <About/>
-      }
+        element: <About />,
+      },
+      {
+        path: "/consult",
+        element: <Consult />,
+      },
     ],
   },
 ]);

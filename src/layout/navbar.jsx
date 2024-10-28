@@ -22,7 +22,7 @@ export default function Navigation() {
   const menuItems = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
-    { name: "Integrations", path: "/integrations" },
+    { name: "Consult", path: "/consult" },
   ];
 
   return (
@@ -56,7 +56,7 @@ export default function Navigation() {
           return (
             <NavbarItem key={item.path} isActive={isActive}>
               <Link
-                className={`text-xl ${
+                className={`text-medium ${
                   isActive ? "text-primary" : "text-foreground"
                 }`}
                 href={item.path}
@@ -69,7 +69,7 @@ export default function Navigation() {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
-          <Link href="#" className="text-xl">
+          <Link href="#" className="text-medium">
             Login
           </Link>
         </NavbarItem>

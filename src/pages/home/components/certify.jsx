@@ -1,3 +1,5 @@
+import binus from "../../../../src/assets/logo-binus.png";
+import wasteless from "../../../../src/assets/logo-wasteless.png";
 export default function CertifyHome() {
     return (
       <div className="bg-white py-24 sm:py-32">
@@ -7,15 +9,15 @@ export default function CertifyHome() {
           </h2>
           <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
             <img
-              alt="Transistor"
-              src="https://tailwindui.com/plus/img/logos/158x48/transistor-logo-gray-900.svg"
+              alt="Binus"
+              src={binus}
               width={158}
               height={48}
               className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
             />
             <img
-              alt="Reform"
-              src="https://tailwindui.com/plus/img/logos/158x48/reform-logo-gray-900.svg"
+              alt="Wasteless"
+              src={wasteless}
               width={158}
               height={48}
               className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
