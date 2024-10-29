@@ -5,7 +5,7 @@ const tiers = [
     name: "Personal",
     id: "tier-personal",
     href: "#",
-    pricePerSession: "$15",
+    pricePerSession: "Rp. 100000",
     description: "Konsultasi online secara individu untuk kebutuhan pribadi.",
     features: [
       "1 sesi per pembelian",
@@ -19,7 +19,7 @@ const tiers = [
     name: "Couples",
     id: "tier-couples",
     href: "#",
-    pricePerSession: "$25",
+    pricePerSession: "Rp. 200000",
     description: "Konsultasi bersama pasangan untuk memperkuat hubungan.",
     features: [
       "1 sesi per pembelian",
@@ -34,7 +34,7 @@ const tiers = [
     name: "Teen",
     id: "tier-teen-children",
     href: "#",
-    pricePerSession: "$10",
+    pricePerSession: "Rp. 150000",
     description: "Konsultasi untuk remaja atau anak-anak dengan profesional.",
     features: [
       "Pendekatan ramah anak",
@@ -109,7 +109,7 @@ export default function ConsultHeader() {
                   "text-5xl font-semibold tracking-tight"
                 )}
               >
-                {tier.priceMonthly}
+                {tier.pricePerSession}
               </span>
               <span
                 className={classNames(
@@ -117,7 +117,7 @@ export default function ConsultHeader() {
                   "text-base"
                 )}
               >
-                /month
+                /session
               </span>
             </p>
             <p

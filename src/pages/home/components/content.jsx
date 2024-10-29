@@ -1,10 +1,13 @@
 import {
+  ClockIcon,
   CloudArrowUpIcon,
   LockClosedIcon,
   ServerIcon,
+  VideoCameraIcon,
 } from "@heroicons/react/20/solid";
 
 import landing from "../../../assets/landing-web.png";
+import { Clock10Icon, LockOpen } from "lucide-react";
 
 export default function HomeContent() {
   return (
@@ -41,7 +44,7 @@ export default function HomeContent() {
               </p>
               <ul role="list" className="mt-8 space-y-8 text-gray-600">
                 <li className="flex gap-x-3">
-                  <CloudArrowUpIcon
+                  <VideoCameraIcon
                     aria-hidden="true"
                     className="mt-1 h-5 w-5 flex-none text-indigo-600"
                   />
@@ -65,7 +68,7 @@ export default function HomeContent() {
                   </span>
                 </li>
                 <li className="flex gap-x-3">
-                  <ServerIcon
+                  <ClockIcon
                     aria-hidden="true"
                     className="mt-1 h-5 w-5 flex-none text-indigo-600"
                   />

@@ -42,7 +42,7 @@ export default function Navigation() {
           "data-[active=true]:after:rounded-[2px]",
           "data-[active=true]:after:bg-primary",
         ],
-        base: "p-5 bg-transparent",
+        base: "p-5 bg-white",
       }}
     >
       <NavbarBrand>
