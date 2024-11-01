@@ -1,56 +1,61 @@
-import { CheckIcon } from "@heroicons/react/20/solid";
+"use client";
 
-const tiers = [
-  {
-    name: "Personal",
-    id: "tier-personal",
-    href: "#",
-    pricePerSession: "Rp. 100000",
-    description: "Konsultasi online secara individu untuk kebutuhan pribadi.",
-    features: [
-      "1 sesi per pembelian",
-      "Dukungan via chat dan video",
-      "Konsultasi dengan profesional bersertifikat",
-      "Respon dukungan dalam 24 jam",
-    ],
-    featured: false,
-  },
-  {
-    name: "Couples",
-    id: "tier-couples",
-    href: "#",
-    pricePerSession: "Rp. 200000",
-    description: "Konsultasi bersama pasangan untuk memperkuat hubungan.",
-    features: [
-      "1 sesi per pembelian",
-      "Dukungan video eksklusif",
-      "Konsultasi hubungan dengan spesialis",
-      "Panduan khusus untuk pasangan",
-      "Dukungan responsif",
-    ],
-    featured: true,
-  },
-  {
-    name: "Teen",
-    id: "tier-teen-children",
-    href: "#",
-    pricePerSession: "Rp. 150000",
-    description: "Konsultasi untuk remaja atau anak-anak dengan profesional.",
-    features: [
-      "Pendekatan ramah anak",
-      "Dukungan via chat",
-      "Bimbingan dari psikolog anak dan remaja",
-      "Respon dukungan dalam 24 jam",
-    ],
-    featured: false,
-  },
-];
+import { CheckIcon } from "@heroicons/react/20/solid";
+import {
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Button,
+  ModalContent,
+  CheckboxGroup,
+  Checkbox,
+  Input,
+} from "@nextui-org/react";
+import {
+  personalCategories,
+  couplesCategories,
+} from "../../../data-json/category";
+import { tiers } from "../../../data-json/tiers";
+import { useState } from "react";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function ConsultHeader() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedTier, setSelectedTier] = useState(null);
+
+  const [isInvalid, setIsInvalid] = useState(false);
+  const [isHidden, setHidden] = useState(true);
+
+  const onOpen = (tier) => {
+    setSelectedTier(tier);
+    setIsOpen(true);
+  };
+  const onClose = () => {
+    setSelectedTier(null);
+    setIsOpen(false);
+  };
+
+  const onHidden = () => {
+    setHidden(true);
+  };
+
+  const onVisible = () => {
+    setHidden(false);
+  };
+
+  const getCategories = () => {
+    if (selectedTier?.name === "Personal") {
+      return personalCategories;
+    } else if (selectedTier?.name === "Couples") {
+      return couplesCategories;
+    }
+    return [];
+  };
+
   return (
     <div className="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
       <div
@@ -80,7 +85,7 @@ export default function ConsultHeader() {
       <div className="mx-auto mt-16 grid max-w-7xl grid-cols-1 items-center gap-y-6 sm:mt-20 sm:grid-cols-2 lg:max-w-6xl lg:grid-cols-3">
         {tiers.map((tier, tierIdx) => (
           <div
-            key={tier.id}
+            key={tiers.id}
             className={classNames(
               tier.featured
                 ? "relative bg-gray-900 shadow-2xl"
@@ -149,12 +154,12 @@ export default function ConsultHeader() {
               ))}
             </ul>
             <a
-              href={tier.href}
+              onClick={() => onOpen(tier)}
               aria-describedby={tier.id}
               className={classNames(
                 tier.featured
-                  ? "bg-indigo-500 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-indigo-500"
-                  : "text-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300 focus-visible:outline-indigo-600",
+                  ? "bg-indigo-500 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-indigo-500 cursor-pointer"
+                  : "text-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300 focus-visible:outline-indigo-600 cursor-pointer",
                 "mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10"
               )}
             >
@@ -163,6 +168,52 @@ export default function ConsultHeader() {
           </div>
         ))}
       </div>
+      <Modal size="2xl" isOpen={isOpen} onClose={onClose}>
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1">
+                Mau diskusi soal apa ?
+              </ModalHeader>
+              <ModalBody>
+                <CheckboxGroup
+                  isInvalid={isInvalid}
+                  label="Pilih salah satu permasalahan yang ingin kamu diskusikan :"
+                  onValueChange={(value) => {
+                    setIsInvalid(value.length < 1);
+                    if(value.includes(10)) {
+                      setHidden(false);
+                    } else {
+                      setHidden(true);
+                    }
+                  }}
+                >
+                  <div className="grid grid-cols-2 gap-4">
+                    {getCategories().map((category) => (
+                      <Checkbox key={category.id} value={category.id}>
+                        {category.name}
+                      </Checkbox>
+                    ))}
+                  </div>
+                </CheckboxGroup>
+                <Input
+                  hidden={isHidden}
+                  type="text"
+                  description="Apa topik yang mau kamu bahas ?"
+                />
+              </ModalBody>
+              <ModalFooter>
+                <Button color="danger" variant="light" onPress={onClose}>
+                  Batal
+                </Button>
+                <Button color="primary" onPress={onClose}>
+                  Pilih Topik
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
     </div>
   );
 }
