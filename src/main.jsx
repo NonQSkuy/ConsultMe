@@ -6,6 +6,7 @@ import Layout from "./layout/layout";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Consult from "./pages/consult";
+import PsikologPage from "./pages/psikolog";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
         path: "/consult",
         element: <Consult />,
       },
+      {
+        path: "/psikolog",
+        element: <PsikologPage/>
+      }
     ],
   },
 ]);

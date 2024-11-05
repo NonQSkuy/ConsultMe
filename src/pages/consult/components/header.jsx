@@ -18,6 +18,7 @@ import {
 } from "../../../data-json/category";
 import { tiers } from "../../../data-json/tiers";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -29,6 +30,8 @@ export default function ConsultHeader() {
 
   const [isInvalid, setIsInvalid] = useState(false);
   const [isHidden, setHidden] = useState(true);
+
+  const navigate = useNavigate();
 
   const onOpen = (tier) => {
     setSelectedTier(tier);
@@ -197,7 +200,7 @@ export default function ConsultHeader() {
                   </div>
                 </CheckboxGroup>
                 <Input
-                  hidden={isHidden}
+                  className={isHidden ? "hidden" : ""}
                   type="text"
                   description="Apa topik yang mau kamu bahas ?"
                 />
@@ -206,7 +209,7 @@ export default function ConsultHeader() {
                 <Button color="danger" variant="light" onPress={onClose}>
                   Batal
                 </Button>
-                <Button color="primary" onPress={onClose}>
+                <Button color="primary" onPress={() => navigate("/psikolog")}>
                   Pilih Topik
                 </Button>
               </ModalFooter>
