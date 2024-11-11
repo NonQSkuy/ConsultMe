@@ -14,20 +14,20 @@ export default function Footer() {
                     <Image src={appstore} width={200} alt="App Store" />
                 </div>
                 <div>
-                    <p className="font-bold text-2xl text-primary">Our Service</p>
-                    <Link className="block py-1 text-lg text-gray-700 hover:text-primary transition-colors duration-300">Meditation</Link>
-                    <Link className="block py-1 text-lg text-gray-700 hover:text-primary transition-colors duration-300">Counseling</Link>
+                    <p className="font-bold text-xl text-primary">Our Service</p>
+                    <Link className="block py-1 text-md text-gray-700 hover:text-primary transition-colors duration-300">Meditation</Link>
+                    <Link className="block py-1 text-md text-gray-700 hover:text-primary transition-colors duration-300">Counseling</Link>
                 </div>
                 <div>
-                    <p className="font-bold text-2xl text-primary">Get to know us</p>
-                    <Link className="block py-1 text-lg text-gray-700 hover:text-primary transition-colors duration-300">About Us</Link>
-                    <Link className="block py-1 text-lg text-gray-700 hover:text-primary transition-colors duration-300">Our Team</Link>
+                    <p className="font-bold text-xl text-primary">Get to know us</p>
+                    <Link className="block py-1 text-md text-gray-700 hover:text-primary transition-colors duration-300">About Us</Link>
+                    <Link className="block py-1 text-md text-gray-700 hover:text-primary transition-colors duration-300">Our Team</Link>
                 </div>
                 <div>
-                    <p className="font-bold text-2xl text-primary">Others</p>
-                    <Link className="block py-1 text-lg text-gray-700 hover:text-primary transition-colors duration-300">FAQ</Link>
-                    <Link className="block py-1 text-lg text-gray-700 hover:text-primary transition-colors duration-300">Terms & Conditions</Link>
-                    <Link className="block py-1 text-lg text-gray-700 hover:text-primary transition-colors duration-300">Privacy Policy</Link>
+                    <p className="font-bold text-xl text-primary">Others</p>
+                    <Link className="block py-1 text-md text-gray-700 hover:text-primary transition-colors duration-300">FAQ</Link>
+                    <Link className="block py-1 text-md text-gray-700 hover:text-primary transition-colors duration-300">Terms & Conditions</Link>
+                    <Link className="block py-1 text-md text-gray-700 hover:text-primary transition-colors duration-300">Privacy Policy</Link>
                 </div>
             </div>
             <div className="text-center bg-slate-300 p-5">

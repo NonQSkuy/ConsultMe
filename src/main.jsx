@@ -7,6 +7,8 @@ import Home from "./pages/home";
 import About from "./pages/about";
 import Consult from "./pages/consult";
 import PsikologPage from "./pages/psikolog";
+import Payment from "./payment";
+import PsikologDetail from "./pages/psikolog/detail";
 
 const router = createBrowserRouter([
   {
@@ -27,7 +29,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/psikolog",
-        element: <PsikologPage/>
+        element: <PsikologPage />,
+      },
+      {
+        path: "/payment",
+        element: <Payment />,
+      },
+      {
+        path: "/psikologDetail",
+        element: <PsikologDetail />,
       }
     ],
   },

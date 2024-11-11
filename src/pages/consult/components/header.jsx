@@ -42,14 +42,6 @@ export default function ConsultHeader() {
     setIsOpen(false);
   };
 
-  const onHidden = () => {
-    setHidden(true);
-  };
-
-  const onVisible = () => {
-    setHidden(false);
-  };
-
   const getCategories = () => {
     if (selectedTier?.name === "Personal") {
       return personalCategories;

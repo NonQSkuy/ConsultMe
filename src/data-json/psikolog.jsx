@@ -5,7 +5,9 @@ const psikolog = [
         "rating": 4.5,
         "status": "Online",
         "hari": "Senin",
-        "image": "https://randomuser.me/api/portraits/women/1.jpg",
+        "image": "https://xsgames.co/randomusers/avatar.php?g=male",
+        "expertise": ["Pendidikan", "Percintaan", "Keluarga"],
+        "jadwal" : ["12.30", "13.30", "14.30", "15.30", "16.30", "17.30", "18.30", "19.30", "20.30", "21.30"]
     },
     {
         "id": 2,
@@ -13,7 +15,9 @@ const psikolog = [
         "rating": 4.5,
         "status": "Online",
         "hari": "Selasa",
-        "image": "https://randomuser.me/api/portraits/men/2.jpg",
+        "image": "https://xsgames.co/randomusers/avatar.php?g=male",
+        "expertise": ["Pendidikan", "Percintaan", "Keluarga"],
+        
     },
     {
         "id": 3,
@@ -21,7 +25,8 @@ const psikolog = [
         "rating": 4.5,
         "status": "Online",
         "hari": "Rabu",
-        "image": "https://randomuser.me/api/portraits/men/3.jpg",
+        "image": "https://xsgames.co/randomusers/avatar.php?g=male",
+        "expertise": ["Pendidikan", "Percintaan", "Keluarga"]
     },
     {
         "id": 4,
@@ -29,7 +34,8 @@ const psikolog = [
         "rating": 4.5,
         "status": "Online",
         "hari": "Kamis",
-        "image": "https://randomuser.me/api/portraits/men/4.jpg",
+        "image": "https://xsgames.co/randomusers/avatar.php?g=male",
+        "expertise": ["Pendidikan", "Percintaan", "Keluarga"]
     },
     {
         "id": 5,
@@ -37,7 +43,8 @@ const psikolog = [
         "rating": 4.5,
         "status": "Online",
         "hari": "Jumat",
-        "image": "https://randomuser.me/api/portraits/men/5.jpg",
+        "image": "https://xsgames.co/randomusers/avatar.php?g=male",
+        "expertise": ["Pendidikan", "Percintaan", "Keluarga"]
     },
     {
         "id": 6,
@@ -45,7 +52,8 @@ const psikolog = [
         "rating": 4.5,
         "status": "Online",
         "hari": "Jumat",
-        "image": "https://randomuser.me/api/portraits/men/6.jpg",
+        "image": "https://xsgames.co/randomusers/avatar.php?g=female",
+        "expertise": ["Pendidikan", "Percintaan", "Keluarga"]
     },
     {
         "id": 7,
@@ -53,7 +61,8 @@ const psikolog = [
         "rating": 4.5,
         "status": "Online",
         "hari": "Jumat",
-        "image": "https://randomuser.me/api/portraits/men/7.jpg",
+        "image": "https://xsgames.co/randomusers/avatar.php?g=male",
+        "expertise": ["Pendidikan", "Percintaan", "Keluarga"]
     },
     {
         "id": 8,
@@ -61,7 +70,8 @@ const psikolog = [
         "rating": 4.5,
         "status": "Online",
         "hari": "Jumat",
-        "image": "https://randomuser.me/api/portraits/men/2.jpg",
+        "image": "https://xsgames.co/randomusers/avatar.php?g=female",
+        "expertise": ["Pendidikan", "Percintaan", "Keluarga"]
     },
     {
         "id": 9,
@@ -69,7 +79,17 @@ const psikolog = [
         "rating": 4.5,
         "status": "Online",
         "hari": "Jumat",
-        "image": "https://randomuser.me/api/portraits/men/2.jpg",
+        "image": "https://xsgames.co/randomusers/avatar.php?g=female",
+        "expertise": ["Pendidikan", "Percintaan", "Keluarga"]
+    },
+    {
+        "id": 10,
+        "name": "Dr. John Doe",
+        "rating": 4.5,
+        "status": "Online",
+        "hari": "Jumat",
+        "image": "https://xsgames.co/randomusers/avatar.php?g=female",
+        "expertise": ["Pendidikan", "Percintaan", "Keluarga"]
     },
 ]
 
