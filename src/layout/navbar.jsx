@@ -19,46 +19,74 @@ import { Bell } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 export default function Navigation() {
-
   const navigate = useNavigate();
+  
   return (
-    <Navbar>
-      <NavbarBrand>
-        <img onClick={() => navigate("/")} src={Logo} alt="" className="w-16 cursor-pointer" />
+    <Navbar
+      isBordered
+      classNames={{
+        item: [
+          "flex",
+          "relative",
+          "h-full",
+          "items-center",
+          "data-[active=true]:after:content-['']",
+          "data-[active=true]:after:absolute",
+          "data-[active=true]:after:bottom-0",
+          "data-[active=true]:after:left-0",  
+          "data-[active=true]:after:right-0",
+          "data-[active=true]:after:h-[2px]",
+          "data-[active=true]:after:rounded-[2px]",
+          "data-[active=true]:after:bg-primary",
+        ],
+      }}
+    >
+      <NavbarBrand className="">
+        <img
+          onClick={() => navigate("/")}
+          src={Logo}
+          alt=""
+          className="w-16 cursor-pointer"
+        />
       </NavbarBrand>
-
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent
+        className="flex gap-4 justify-between  w-1/2"
+        justify="end"
+      >
         <NavbarItem>
-          <Link color="foreground" href="/about">
+          <Link className="font-semibold" color="foreground" href="/about">
             About Us
           </Link>
         </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="/consult" aria-current="page" color="secondary">
+        <NavbarItem>
+          <Link
+            className="font-semibold"
+            href="/consult"
+            aria-current="page"
+            color="foreground"
+          >
             Consult
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="/calendar">
+          <Link className="font-semibold" color="foreground" href="/calendar">
             Calendar
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="/forum">
+          <Link className="font-semibold" color="foreground" href="/forum">
             Forum
           </Link>
         </NavbarItem>
-      </NavbarContent>
-
-      <NavbarContent as="div" justify="end">
         <Popover placement="bottom" showArrow={true}>
           <PopoverTrigger>
-            <Bell className="cursor-pointer"/>
+            <Bell className="cursor-pointer" />
           </PopoverTrigger>
           <PopoverContent>
             <div className="px-1 py-2 max-w-80 space-y-3">
               <div className="text-small border-b-1 py-1 rounded-md bg-primary-200 p-2 cursor-pointer">
-                3 Hari lagi kamu ada jadwal konsultasi dengan psikolog <span className="font-bold">Junthau Hans William</span>
+                3 Hari lagi kamu ada jadwal konsultasi dengan psikolog{" "}
+                <span className="font-bold">Junthau Hans William</span>
                 <p className="text-xs text-gray-500 text-end">3 Days ago</p>
               </div>
               <div className="text-small border-b-1 py-1 rounded-md bg-gray-200 p-2 cursor-pointer">
@@ -66,14 +94,14 @@ export default function Navigation() {
                 <p className="text-xs text-gray-500 text-end">5 Days ago</p>
               </div>
               <div className="text-small border-b-1 py-1 rounded-md bg-gray-200 p-2 cursor-pointer">
-                Kamu telah berhasil membuat jadwal konsultasi dengan psikolog <span className="font-bold">Junthau Hans William</span>
+                Kamu telah berhasil membuat jadwal konsultasi dengan psikolog{" "}
+                <span className="font-bold">Junthau Hans William</span>
                 <p className="text-xs text-gray-500 text-end">7 Days ago</p>
               </div>
               <div className="text-small border-b-1 py-1 rounded-md bg-gray-200 p-2 cursor-pointer">
                 Mood kamu lagi jelek hari ini, semangat ya !!
                 <p className="text-xs text-gray-500 text-end">9 Days ago</p>
               </div>
-              
             </div>
           </PopoverContent>
         </Popover>

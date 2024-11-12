@@ -1,5 +1,5 @@
 import { SpeakerWaveIcon, SpeakerXMarkIcon } from "@heroicons/react/16/solid";
-import { Checkbox, Slider, Switch } from "@nextui-org/react";
+import { Button, Checkbox, Slider, Switch } from "@nextui-org/react";
 import {
   AudioLines,
   FileAudio,
@@ -11,6 +11,7 @@ import {
   VideoIcon,
 } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Webcam from "react-webcam";
 
 export default function PrepareMeeting() {
@@ -20,8 +21,15 @@ export default function PrepareMeeting() {
   };
 
   const [isCameraOpen, setIsCameraOpen] = useState(false);
+
+  const toggleCamera = () => {
+    setIsCameraOpen((prev) => !prev);
+  };
+
+  const navigate = useNavigate();
+
   return (
-    <div className="px-52 py-56">
+    <div className="px-52 py-32">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -37,22 +45,29 @@ export default function PrepareMeeting() {
       <p className="text-center font-semibold text-2xl">
         Choose your video and audio options
       </p>
-      <div className="flex justify-between items-center space-x-10">
+      <div className="flex justify-between items-center space-x-10 ">
         <div className="bg-gray-800 w-1/2">
-          <Webcam
-            audio={false}
-            height={600}
-            screenshotFormat="image/jpeg"
-            videoConstraints={videoConstraints}
-          ></Webcam>
+          {isCameraOpen ? (
+            <Webcam
+              audio={false}
+              screenshotFormat="image/jpeg"
+              videoConstraints={videoConstraints}
+              mirrored={true}
+            />
+          ) : (
+            <div className="h-[380px] flex items-center justify-center">
+              <MonitorSpeaker width={300} />
+            </div>
+          )}
+          
           <div className="px-10 py-5">
-            <Switch>
+            <Switch checked={isCameraOpen} onChange={toggleCamera}>
               <VideoIcon fill="white" color="white" size={40} />
             </Switch>
           </div>
         </div>
-        <div className="w-1/2 h-[500px] space-y-3">
-          <div className="flex shadow-xl justify-between bg-gray-400 p-6 w-full">
+        <div className="w-1/2 space-y-3">
+          <div className="flex shadow-xl justify-between bg-gray-400 p-3 w-full">
             <div className="flex items-center">
               <SpeakerWaveIcon color="white" width={30} className="mr-10" />
               <p className="font-semibold">Computer Audio</p>
@@ -60,7 +75,7 @@ export default function PrepareMeeting() {
             <Checkbox size="lg"></Checkbox>
           </div>
 
-          <div className="bg-gray-500 p-10 w-full space-y-5">
+          <div className="bg-gray-500 p-5 w-full space-y-5">
             <div className="flex items-center justify-between w-full px-2">
               <p>PC Mic and Speakers</p>
               <SlidersVertical />
@@ -105,6 +120,10 @@ export default function PrepareMeeting() {
             <Checkbox size="lg"></Checkbox>
           </div>
         </div>
+      </div>
+      <div className="flex justify-end mt-10 space-x-7">
+          <Button color="danger">Cancel</Button>
+          <Button onClick={() => navigate("/meet")} color="primary">Join Now</Button>
       </div>
       <div
         aria-hidden="true"

@@ -13,6 +13,7 @@ import CalendarScheduler from "./pages/calendar";
 import PrepareMeeting from "./pages/room-meet";
 import Forum from "./pages/forum";
 import ForumDetail from "./pages/forum/forumdetail";
+import DetailRoomMeet from "./pages/room-meet/detail";
 
 const router = createBrowserRouter([
   {
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
       {
         path: "/forumdetail",
         element: <ForumDetail/>
+      },
+      {
+        path: "/meet",
+        element: <DetailRoomMeet />,
       }
     ],
   },
