@@ -43,6 +43,11 @@ export default function Navigation() {
             Calendar
           </Link>
         </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="/forum">
+            Forum
+          </Link>
+        </NavbarItem>
       </NavbarContent>
 
       <NavbarContent as="div" justify="end">

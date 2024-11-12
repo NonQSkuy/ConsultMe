@@ -11,6 +11,8 @@ import Payment from "./payment";
 import PsikologDetail from "./pages/psikolog/detail";
 import CalendarScheduler from "./pages/calendar";
 import PrepareMeeting from "./pages/room-meet";
+import Forum from "./pages/forum";
+import ForumDetail from "./pages/forum/forumdetail";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +50,14 @@ const router = createBrowserRouter([
       {
         path: "/prepare",
         element: <PrepareMeeting />,
+      },
+      {
+        path: "/forum",
+        element: <Forum/>
+      },
+      {
+        path: "/forumdetail",
+        element: <ForumDetail/>
       }
     ],
   },
