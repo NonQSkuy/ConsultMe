@@ -16,28 +16,31 @@ import {
 } from "@nextui-org/react";
 import Logo from "../assets/logo.png";
 import { Bell } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function Navigation() {
+
+  const navigate = useNavigate();
   return (
     <Navbar>
       <NavbarBrand>
-        <img src={Logo} alt="" className="w-16" />
+        <img onClick={() => navigate("/")} src={Logo} alt="" className="w-16 cursor-pointer" />
       </NavbarBrand>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="foreground" href="/about">
             About Us
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
           <Link href="/consult" aria-current="page" color="secondary">
-            Consult Now
+            Consult
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
-            Integrations
+          <Link color="foreground" href="/calendar">
+            Calendar
           </Link>
         </NavbarItem>
       </NavbarContent>

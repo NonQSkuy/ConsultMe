@@ -9,6 +9,7 @@ import Consult from "./pages/consult";
 import PsikologPage from "./pages/psikolog";
 import Payment from "./payment";
 import PsikologDetail from "./pages/psikolog/detail";
+import CalendarScheduler from "./calendar";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "/psikologDetail",
         element: <PsikologDetail />,
+      },
+      {
+        path: "calendar",
+        element: <CalendarScheduler/>
       }
     ],
   },

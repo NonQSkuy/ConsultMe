@@ -16,6 +16,7 @@ import {
   ThumbsUpIcon,
 } from "lucide-react";
 import logo from "../../assets/onggo.jpeg";
+import { useNavigate } from "react-router-dom";
 
 export default function PsikologDetail() {
   const expertise = [
@@ -58,6 +59,8 @@ export default function PsikologDetail() {
       tanggal: "17 Nov",
     },
   ];
+
+  const navigate = useNavigate();
   return (
     <div className="p-32 flex">
       <Card shadow="lg">
@@ -88,7 +91,7 @@ export default function PsikologDetail() {
               <div>
                 <div className="flex rounded-3xl border-1 p-2">
                   <Briefcase className="mr-1" />
-                  <p>8 years</p>
+                  <p>8 tahun</p>
                 </div>
               </div>
             </div>
@@ -164,7 +167,7 @@ export default function PsikologDetail() {
                     20.00
                   </div>
                 </div>
-                <Button className="w-full rounded-2xl bg-primary-300 mt-10 text-white">
+                <Button onClick={() => navigate("/payment")} className="w-full rounded-2xl bg-primary-300 mt-10 text-white">
                   Jadwalkan Sekarang
                 </Button>
               </div>

@@ -63,7 +63,7 @@ import {
   StarIcon,
   StarsIcon,
 } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const sortOptions = [
   { name: "Best Rating", href: "#", current: false },
@@ -104,8 +104,6 @@ const filters = [
 
 export default function Example() {
   const [selectedKeys, setSelectedKeys] = React.useState();
-  const [isOpen, setIsOpen] = useState(false);
-  const onClose = () => setIsOpen(false);
 
   const navigate = useNavigate();
 
@@ -198,48 +196,17 @@ export default function Example() {
                 <Calendar className="mr-2 text-primary-400" />
                 <p>{item.hari}</p>
               </div>
-              <div onClick={setIsOpen} className="text-end">
-                <div className="text-primary-400 flex justify-end">
-                  Lihat Jadwal{" "}
+              <div  className="text-end">
+                <Link to="/psikologdetail" className="text-primary-400 flex justify-end">
+                  Lihat Profile{" "}
                   <span>
                     <ArrowRight />
                   </span>
-                </div>
+                </Link>
               </div>
             </CardBody>
           </Card>
         ))}
-        <Modal size="2xl" isOpen={isOpen} onClose={onClose}>
-          <ModalContent>
-            {(onClose) => (
-              <>
-                <ModalHeader className="flex flex-col gap-1">
-                  Jadwal Yang tersedia
-                </ModalHeader>
-                <ModalBody>
-                  <p className="text-sm text-gray-400 text-end">
-                    10 jadwal Tersedia
-                  </p>
-                  <div className="grid grid-cols-4">
-                    {psikolog[0].jadwal.map((jadwal) => (
-                      <div className="border-2 rounded-lg m-3 border-primary-400 p-2 text-center">
-                        {jadwal}
-                      </div>
-                    ))}
-                  </div>
-                </ModalBody>
-                <ModalFooter>
-                  <Button color="danger" variant="light" onPress={onClose}>
-                    Batal
-                  </Button>
-                  <Button color="primary" onPress={() => navigate("/payment")}>
-                    Pilih Topik
-                  </Button>
-                </ModalFooter>
-              </>
-            )}
-          </ModalContent>
-        </Modal>
       </div>
       <div className="flex justify-center my-10">
         <Pagination color="primary" showControls total={10} initialPage={1} />
