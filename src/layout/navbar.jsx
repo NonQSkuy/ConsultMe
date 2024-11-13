@@ -13,6 +13,7 @@ import {
   PopoverTrigger,
   PopoverContent,
   Button,
+  Badge,
 } from "@nextui-org/react";
 import Logo from "../assets/logo.png";
 import { Bell } from "lucide-react";
@@ -80,7 +81,9 @@ export default function Navigation() {
         </NavbarItem>
         <Popover placement="bottom" showArrow={true}>
           <PopoverTrigger>
-            <Bell className="cursor-pointer" />
+            <Badge color="danger" content={1} isInvisible={false} shape="circle">
+          <Bell className="cursor-pointer" size={30} />
+        </Badge>
           </PopoverTrigger>
           <PopoverContent>
             <div className="px-1 py-2 max-w-80 space-y-3">
