@@ -8,8 +8,8 @@ export default function CalendarScheduler() {
   const events = [
     {
       id: "1d4c5c73-b5fa-4f67-bb6e-1d5d66cbd57d",
-      title: "Kickoff Meeting.",
-      description: "Initial project kickoff with stakeholders.",
+      title: "Konsultasi Persiapan Pernikahan",
+      description: "Konsultasi persiapan pernikahan bersama psikolog Junthau Hans William",
       startDate: new Date(),
       endDate: new Date(new Date().getTime() + 60 * 60 * 1000),
       variant: "primary",

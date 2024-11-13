@@ -51,7 +51,7 @@ export default function Cards() {
                         <h5 className="text-small tracking-tight text-default-400">{forum.username}</h5>
                     </div>
                     </div>
-                    <Button
+                    {/* <Button
                     className={isFollowed ? "bg-transparent text-foreground border-default-200" : ""}
                     color="primary"
                     radius="full"
@@ -60,7 +60,7 @@ export default function Cards() {
                     onPress={() => setIsFollowed(!isFollowed)}
                     >
                     {isFollowed ? "Unfollow" : "Follow"}
-                    </Button>
+                    </Button> */}
                 </CardHeader>
                 <CardBody className="px-3 py-5 text-small">
                     <p>

@@ -36,7 +36,7 @@ const tiers = [
       description: "Konsultasi untuk remaja atau anak-anak dengan profesional.",
       features: [
         "Pendekatan ramah anak",
-        "Dukungan via chat",
+        "Dukungan via chat dan video",
         "Bimbingan dari psikolog anak dan remaja",
         "Respon dukungan dalam 24 jam",
       ],

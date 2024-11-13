@@ -67,16 +67,18 @@ export default function ConsultHeader() {
       </div>
       <div className="mx-auto max-w-4xl text-center">
         <h2 className="text-base font-semibold leading-7 text-indigo-600">
-          Pricing
+          Harga
         </h2>
         <p className="mt-2 text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-6xl">
-          Choose the right plan for you
+          Pilih Paket yang Sesuai untuk Anda
         </p>
       </div>
       <p className="mx-auto mt-6 max-w-2xl text-pretty text-center text-lg font-medium text-gray-600 sm:text-xl/8">
-        Choose an affordable plan that’s packed with the best features for
-        engaging your audience, creating customer loyalty, and driving sales.
+        Temukan paket terjangkau yang menawarkan fitur terbaik untuk mendukung
+        kebutuhan kesehatan mental Anda. Kami hadir untuk memberikan layanan
+        yang mudah diakses, berkualitas, dan aman.
       </p>
+
       <div className="mx-auto mt-16 grid max-w-7xl grid-cols-1 items-center gap-y-6 sm:mt-20 sm:grid-cols-2 lg:max-w-6xl lg:grid-cols-3">
         {tiers.map((tier, tierIdx) => (
           <div
@@ -176,7 +178,7 @@ export default function ConsultHeader() {
                   label="Pilih salah satu permasalahan yang ingin kamu diskusikan :"
                   onValueChange={(value) => {
                     setIsInvalid(value.length < 1);
-                    if(value.includes(10)) {
+                    if (value.includes(10)) {
                       setHidden(false);
                     } else {
                       setHidden(true);
