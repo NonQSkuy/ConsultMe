@@ -3,6 +3,7 @@ import jun from "../../../assets/jun.png";
 import alvin from "../../../assets/alvin.png";
 import frenky from "../../../assets/frenky.png";
 import john from "../../../assets/john.png";
+import anjay from "../../../assets/anjay.jpg";
 import { Avatar } from "@nextui-org/react";
 
 const About3 = () => {
@@ -25,8 +26,8 @@ const About3 = () => {
         </div>
         <div className="w-full lg:w-8/12 ">
           <img
-            className="w-full h-full"
-            src="https://i.ibb.co/FhgPJt8/Rectangle-116.png"
+            className="w-full h-full rounded-2xl"
+            src={anjay}
             alt="A group of People"
           />
         </div>

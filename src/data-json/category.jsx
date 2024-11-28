@@ -3,10 +3,7 @@ const couplesCategories = [
     id: 1,
     name: "Kekerasan",
   },
-  {
-    id: 2,
-    name: "Keuangan",
-  },
+
   {
     id: 3,
     name: "Penerimaan Pasangan",
@@ -42,77 +39,77 @@ const couplesCategories = [
 ];
 
 const personalCategories = [
-    {
-        id: 1,
-        name: "Kendali emosi"
-    },
-    {
-        id: 2,
-        name: "Kecanduan"
-    },
-    {
-        id: 3,
-        name: "Keluarga"
-    },
-    {
-        id: 4,
-        name: "Kesepian"
-    },
-    {
-        id: 5,
-        name: "Sosial"
-    },
-    {
-        id: 6,
-        name: "Pekerjaan"
-    },
-    {
-        id: 7,
-        name: "Percintaan"
-    },
-    {
-        id: 8,
-        name: "Pendidikan"
-    },
-    {
-        id: 9,
-        name: "Kecemasan"
-    },
-    {
-        id: 10,
-        name: "Lainnya"
-    }
+  {
+    id: 1,
+    name: "Kendali emosi",
+  },
+  {
+    id: 2,
+    name: "Kecanduan",
+  },
+  {
+    id: 3,
+    name: "Keluarga",
+  },
+  {
+    id: 4,
+    name: "Kesepian",
+  },
+  {
+    id: 5,
+    name: "Sosial",
+  },
+  {
+    id: 6,
+    name: "Pekerjaan",
+  },
+  {
+    id: 7,
+    name: "Percintaan",
+  },
+  {
+    id: 8,
+    name: "Pendidikan",
+  },
+  {
+    id: 9,
+    name: "Kecemasan",
+  },
+  {
+    id: 10,
+    name: "Lainnya",
+  },
 ];
 
 const hari = [
   {
-      id: 1,
-      name: "Senin"
+    id: 1,
+    name: "Senin",
   },
   {
-      id: 2,
-      name: "Selasa"
+    id: 2,
+    name: "Selasa",
   },
   {
-      id: 3,
-      name: "Rabu"
+    id: 3,
+    name: "Rabu",
   },
   {
-      id: 4,
-      name: "Kamis"
+    id: 4,
+    name: "Kamis",
   },
   {
-      id: 5,
-      name: "Jumat"
+    id: 5,
+    name: "Jumat",
   },
   {
-      id: 6,
-      name: "Sabtu"
+    id: 6,
+    name: "Sabtu",
   },
   {
-      id: 7,
-      name: "Minggu"
-  }
-]
+    id: 7,
+    name: "Minggu",
+  },
+];
 
 export { couplesCategories, personalCategories, hari };
