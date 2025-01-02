@@ -21,6 +21,7 @@
     "@mui/styled-engine": "^6.1.6",
     "@mui/styled-engine-sc": "^6.1.6",
     "@nextui-org/react": "^2.4.8",
+    "aws-amplify": "^6.11.0",
     "bootstrap": "^5.3.3",
     "date-fns": "^4.1.0",
     "framer-motion": "^11.11.9",
@@ -34,11 +35,17 @@
     "styled-components": "^6.1.13"
   },
   "devDependencies": {
+    "@aws-amplify/backend": "^1.11.0",
+    "@aws-amplify/backend-cli": "^1.4.5",
     "@eslint/js": "^9.11.1",
     "@types/react": "^18.3.10",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.2",
     "autoprefixer": "^10.4.20",
+    "aws-cdk": "^2.173.4",
+    "aws-cdk-lib": "^2.173.4",
+    "constructs": "^10.4.2",
+    "esbuild": "^0.24.2",
     "eslint": "^9.11.1",
     "eslint-plugin-react": "^7.37.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
@@ -46,6 +53,8 @@
     "globals": "^15.9.0",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.14",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
     "vite": "^5.4.8"
   }
 }
